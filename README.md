@@ -1,7 +1,7 @@
 # User Interface for Contactless Delivery Service Robot
 
 
-## :computer: Development Environment
+## Development Environment
 
 
 * Virtual Environments
@@ -16,7 +16,9 @@
 	* Java Script
 
 
-## :page_with_curl: Guide
+
+## Guide
+
 
 1. Run app.py
 ```
