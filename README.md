@@ -3,10 +3,12 @@
 
 ## :computer: Development Environment
 
+
 * Virtual Environments
 	* goorm IDE
 	* FLASK
 	* Ubuntu 18.04 LTS
+	
 	
 * Languages
 	* Python
@@ -14,12 +16,13 @@
 	* Java Script
 
 
-## Guide
+## :page_with_curl: Guide
 
 1. Run app.py
 ```
 python app.py
 ```
+
 
 2. Get URL and Port
 
@@ -27,5 +30,6 @@ python app.py
 ```
 https://yellocar02.run.goorm.io
 ```
+
 * You can get default URL/Port and add URL/Port in the top menu.
 	
