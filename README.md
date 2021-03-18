@@ -30,13 +30,13 @@ python app.py
 
 2. Get URL and Port
 
-	* Click `PROJECT > URL/PORT` in top menu bar, or enter here directly.
-	```
-	https://yellocar02.run.goorm.io
-	```
+* Click `PROJECT > URL/PORT` in top menu bar, or enter here directly.
+```
+https://yellocar02.run.goorm.io
+```
 
 
-	* You can get default URL/Port and add URL/Port in the top menu.
+* You can get default URL/Port and add URL/Port in the top menu.
 	
 
 
