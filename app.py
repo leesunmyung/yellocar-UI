@@ -1,5 +1,5 @@
 from flask import Flask, session, render_template, request, redirect, url_for
-import sys, database
+import sys, database, databaseStar
 
 application = Flask(__name__)
 
@@ -11,10 +11,10 @@ def hello():
     return render_template("hello.html")
 
 
-
 @application.route("/delivery")
 def delivery():
     return render_template("deliveryman.html")
+
 
 @application.route("/receiver")
 def receiver():
@@ -25,13 +25,21 @@ def receiver():
 def upload_done():
     phoneNum = request.form['recvPhone']
     database.save(phoneNum)
-    print(phoneNum)
+    print("전화번호 : ", phoneNum)
     return render_template('after.html', data=phoneNum)
 
 
 @application.route("/receive_done")
 def receive_done():
     return render_template("after2.html")
+
+
+@application.route("/rate_done", methods=["POST"])
+def rate_done():
+    starScore = request.form['star-input']
+    print("별점 : ", starScore)
+    databaseStar.save(starScore)
+    return render_template("close.html")
 
 
 if __name__ == "__main__":

@@ -1,15 +1,5 @@
 <html><head>
-<!--
-    <link href="{{ url_for('static', filename='css/after2.css') }}" rel="stylesheet">
--->
-    <!--
-    <script src="{{ url_for('static', filename='js/after2.js') }}" > </script>
--->
-    
-<script src="static/js/min.js"></script>
-    <!--
-<script src="static/js/star.js"></script>
--->
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Yello Car : Contactless Delivery Service Robot</title><style>
 /* webkit printing magic: print all background colors */
 html {
@@ -623,7 +613,7 @@ blockquote {
 .star-input>.input,
 .star-input>.input>label:hover,
 .star-input>.input>input:focus+label,
-.star-input>.input>input:checked+label{display: inline-block;vertical-align:middle;background:url('static/img/star_y.png') no-repeat;}
+.star-input>.input>input:checked+label{display: inline-block;vertical-align:middle;background:url('static/img/grade_img.png') no-repeat;}
 .star-input{display:inline-block; white-space:nowrap;width:225px;height:40px;padding:25px;line-height:30px;}
 .star-input>.input{display:inline-block;width:150px;background-size:150px;height:28px;white-space:nowrap;overflow:hidden;position: relative;}
 .star-input>.input>input{position:absolute;width:1px;height:1px;opacity:0;}
@@ -658,79 +648,21 @@ function goStar() {
 function close() {
     window.close();
 }
-var starRating = function(){
-var $star = $(".star-input"),
-    $result = $star.find("output>b");
-	
-  	$(document)
-	.on("focusin", ".star-input>.input", 
-		function(){
-   		 $(this).addClass("focus");
- 	})
-		 
-   	.on("focusout", ".star-input>.input", function(){
-    	var $this = $(this);
-    	setTimeout(function(){
-      		if($this.find(":focus").length === 0){
-       			$this.removeClass("focus");
-     	 	}
-   		}, 100);
- 	 })
-  
-    .on("change", ".star-input :radio", function(){
-    	$result.text($(this).next().text());
-  	})
-    .on("mouseover", ".star-input label", function(){
-    	$result.text($(this).text());
-    })
-    .on("mouseleave", ".star-input>.input", function(){
-    	var $checked = $star.find(":checked");
-    		if($checked.length === 0){
-     	 		$result.text("0");
-   		 	} else {
-     	 		$result.text($checked.next().text());
-    		}
-  	});
-};
 
-// starRating();
-        
 
     </script>
     </head>
 <body>
     
-<h1 align = "center">배송을 완료했습니다.</h1>
+<h1 align = "center">이용해주셔서 감사합니다.</h1>
 
     
     <div align = "center">
         
-    <button onclick="goPage()" style="width:100px;height:50px;font-size:20px;" >홈으로</button>  <button onclick="goStar()" style="width:150px;height:50px;font-size:20px;">별점 남기기</button>
+    <button onclick="goPage()" style="width:100px;height:50px;font-size:20px;" >홈으로</button>  <button onclick="self.close()" style="width:100px;height:50px;font-size:20px;">닫기</button>
          </div>
-    
-    <form action="{{url_for('rate_done')}}" method="POST">
-    
-    <span id="starr" class="star-input" style="display:none">
-        
-	<span id="starrr" class="input" style="display:margin:500px">
- 
-    	<input type="radio" name="star-input" value="1" id="p1">
-    	<label for="p1">1</label>
-    	<input type="radio" name="star-input" value="2" id="p2">
-    	<label for="p2">2</label>
-    	<input type="radio" name="star-input" value="3" id="p3">
-    	<label for="p3">3</label>
-    	<input type="radio" name="star-input" value="4" id="p4">
-    	<label for="p4">4</label>
-    	<input type="radio" name="star-input" value="5" id="p5">
-    	<label for="p5">5</label>
 
-  	</span>
-  	<output for="star-input" align="center"><b id="starScore" name="starScore">0</b>점</output>
-        <button type="submit" style="width:100px;height:50px;font-size:20px;" >저장</button>
-            
-</span>
-    </form>
+    
     
 </body>
 </html>
