@@ -4,6 +4,7 @@
 ## Development Environment
 
 
+
 * Virtual Environments
 	* goorm IDE
 	* FLASK
@@ -20,6 +21,7 @@
 ## Guide
 
 
+
 1. Run app.py
 ```
 python app.py
@@ -33,5 +35,11 @@ python app.py
 	https://yellocar02.run.goorm.io
 	```
 
+
 	* You can get default URL/Port and add URL/Port in the top menu.
 	
+
+
+## Database
+* database.csv for storing receivers' phone number
+* databaseStar.csv for storing five-star rating
